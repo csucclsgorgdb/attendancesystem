@@ -1,0 +1,1154 @@
+/* --- FORMAL LIQUID GLASS BACKGROUND --- */
+/* --- REFINED CORPORATE BACKGROUND --- */
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    background: #f8fafc; /* Formal off-white base */
+    position: relative;
+    z-index: 1;
+    padding-bottom: 120px !important;
+}
+
+.bg-animation-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    /* Palette: Slate Grey, Silver, Pearl, and Soft Indigo */
+    background: linear-gradient(-45deg, #f1f5f9, #e2e8f0, #f8fafc, #eef2ff);
+    background-size: 400% 400% !important;
+    
+    /* Adjusted Opacity: 40% makes it professional and light */
+    opacity: 0.4; 
+    
+    /* Slower, more elegant movement for a formal setting */
+    animation: meshMove 12s ease-in-out infinite;
+    transform: translateZ(0);
+}
+
+@keyframes meshMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- ENHANCED GLASS CARDS --- */
+.card, .institution-header, .session-header {
+    /* Slightly more transparency to see the corporate shimmer */
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    
+    /* Thin, formal border */
+    border: 1px solid rgba(226, 232, 240, 0.5) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #4f46e5;
+    --primary-light: #818cf8;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --surface: rgba(255, 255, 255, 0.95);
+    --border: #e2e8f0;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --bg-light: #f8fafc;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.08);
+}
+
+/* --- 2. GLOBAL RESET & BASE --- */
+* { box-sizing: border-box; transition: all 0.2s ease; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0; padding: 20px; min-height: 100vh;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    color: var(--text-main);
+    line-height: 1.5;
+    padding-bottom: 80px !important; /* Space for sticky footer */
+}
+
+.container { max-width: 850px; margin: 0 auto; }
+
+/* --- 💎 SUPER COMPRESSED ANIMATED HEADER --- */
+/* --- 💎 THE MASTER COMPACT & CENTERED HEADER --- */
+header { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Pinaka-importante para mag-center lahat */
+    justify-content: center;
+    text-align: center;
+    
+    /* ZERO-WASTE SPACING: Tinanggal ang higanteng puti */
+    padding: 10px 15px !important; 
+    margin: 0 auto !important;
+    width: 100%;
+    min-height: auto !important; /* Pinipigilan ang pag-stretch */
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem !important; /* Saktong laki lang */
+    margin: 0 !important;
+    padding: 0 !important;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    
+    /* Animated Gradient Text */
+    background: linear-gradient(135deg, #4f46e5, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Mahalaga para sa divider alignment */
+}
+
+/* THE DIVIDER FIX: Siguradong nasa gitna */
+header h1::after {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 4px;
+    background: linear-gradient(90deg, #4f46e5, #10b981);
+    margin: 8px auto 0 auto !important; /* 'auto' left/right forces it to center */
+    border-radius: 50px;
+}
+
+/* THE DATE PILL FIX: Compact & Centered */
+header #current-date { 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    color: var(--primary);
+    
+    padding: 5px 18px !important;
+    margin: 10px auto 0 auto !important; /* Inakyat natin at pinaka-center */
+    
+    border-radius: 50px;
+    font-size: 0.75rem !important;
+    font-weight: 800;
+    border: 1px solid rgba(79, 70, 229, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* --- 📱 XPAD LANDSCAPE FIX --- */
+@media screen and (min-width: 768px) {
+    header {
+        padding: 15px 15px !important; /* Lock ang liit kahit malapad ang screen */
+    }
+    header h1 {
+        font-size: 2rem !important;
+    }
+}
+
+
+/* Animations */
+@keyframes eliteFadeIn {
+    from { opacity: 0; transform: translateY(-15px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes shineText {
+    to { background-position: 200% center; }
+}
+
+
+
+/* --- 🎬 MAGIC ANIMATIONS --- */
+
+/* 1. Pop-in Entrance */
+@keyframes popIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.8); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* 2. Floating Effect (Buhay na buhay ang UI) */
+@keyframes dateFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* 3. Subtle Shine Sweep */
+@keyframes pillShine {
+    0% { left: -100%; }
+    20% { left: 150%; }
+    100% { left: 150%; }
+}
+
+
+/* --- ✨ TABLET (XPAD) SUPREMACY --- */
+@media screen and (min-width: 768px) {
+    header h1 {
+        font-size: 3.8rem; /* Monster Title in Landscape mode */
+    }
+    header {
+        padding: 100px 20px 70px 20px;
+    }
+    header h1::after {
+        width: 140px;
+    }
+}
+
+/* --- 🎬 ALL THE MAGIC ANIMATIONS --- */
+
+/* 1. Header Block: Slow Fade in and Slide Down */
+@keyframes eliteSlideDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 2. Text Shine: Background gradient moves across the text */
+@keyframes shineText {
+    0% { background-position: 0% center; }
+    100% { background-position: 300% center; }
+}
+
+/* 3. Background Glow: The large blur rotates slowly */
+@keyframes backgroundGlow {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* 4. Shiny Divider: The gradient in the divider moves */
+@keyframes shinyDivider {
+    0%, 100% { background-position: 0% center; transform: scale(1); }
+    50% { background-position: 200% center; transform: scale(1.05); }
+}
+
+/* 5. Date Pill: A quick "Pop-In" with bounce */
+@keyframes popIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.8); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* --- 💎 SMART WIDGET DATE PILL --- */
+header #current-date { 
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--primary);
+    padding: 8px 22px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1.5px solid rgba(79, 70, 229, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06), 
+                inset 0 0 10px rgba(255, 255, 255, 0.5);
+    margin-top: 5px;
+    position: relative;
+    overflow: hidden;
+    animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Ang Green Dot Indicator */
+header #current-date::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+    animation: pulseGreen 2s infinite;
+}
+
+/* Ang Reflection/Shine Effect */
+header #current-date::after {
+    content: '';
+    position: absolute;
+    top: -50%; left: -100%;
+    width: 50%; height: 200%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: rotate(30deg);
+    animation: sweep 4s infinite;
+}
+
+/* --- 🎬 MGA ANIMATIONS (Dapat nasa dulo ng CSS) --- */
+@keyframes pulseGreen {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+@keyframes sweep {
+    0% { left: -100%; }
+    20% { left: 150%; }
+    100% { left: 150%; }
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: translateY(10px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* --- 4. TIGHT STICKY HEADER --- */
+.card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 24px; padding: 24px; margin-bottom: 20px;
+    box-shadow: var(--shadow-md);
+    min-height: min-content;
+    overflow: hidden;
+}
+
+.section-label {
+    font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 12px; display: block;
+}
+
+.registration-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+/* --- 4. INPUTS & BUTTONS --- */
+input, select, .modern-select {
+    width: 100%; border: 1.5px solid #e2e8f0; background: #fff;
+    padding: 12px 16px; border-radius: 12px; font-size: 0.95rem; outline: none;
+}
+
+input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1); font-size: 16px; }
+
+.primary-btn {
+    background: var(--primary); color: white; border: none; padding: 14px;
+    border-radius: 12px; font-weight: 700; cursor: pointer; width: 100%;
+    margin-bottom: 24px;
+}
+
+.primary-btn:active { transform: scale(0.98); }
+
+/* --- 5. SESSION HEADER & STATS --- */
+.session-header {
+    background: white; padding: 24px; border-radius: 24px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.session-top-nav {
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
+}
+
+#activeEventTitle { font-size: 1.6rem; font-weight: 800; margin: 0; }
+
+.stats-grid, .stats-bar {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background: #fff; padding: 18px 10px; border-radius: 20px;
+    border: 1px solid #f1f5f9; text-align: center;
+    box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+
+.stat-label { font-size: 0.6rem; font-weight: 800; color: var(--text-muted); display: block; letter-spacing: 0.05em; margin-bottom: 4px; }
+.stat-val { font-size: 1.8rem; font-weight: 900; display: block; }
+
+#pCount { color: var(--success); }
+#eCount { color: var(--warning); }
+#aCount { color: #94a3b8; }
+
+/* --- 6. SEARCH & DOWNLOAD ROW (SIDE-BY-SIDE) --- */
+.search-action-row {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space sa pagitan ng search at button */
+    margin: 0 auto 25px;
+    width: 100%;
+    max-width: 850px; /* Kapantay ng container mo */
+}
+
+.flex-grow {
+    flex: 1; /* Ito ang nagpapatangkad/nagpapahaba sa search bar */
+}
+
+.search-container { 
+    position: relative; 
+    margin: 0 !important; /* Tinanggal ang dating margin para pantay sa button */
+}
+
+/* SEARCH ICON ADJUSTMENT */
+.search-icon-svg {
+    position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+    color: var(--text-muted); pointer-events: none; display: flex; align-items: center;
+    z-index: 5;
+}
+
+.modern-search {
+    width: 100% !important; 
+    padding: 14px 14px 14px 48px !important;
+    border-radius: 16px !important; 
+    border: 1.5px solid rgba(79, 70, 229, 0.2) !important;
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(4px);
+}
+
+/* MODERN DOWNLOAD ICON BUTTON */
+.icon-download-btn {
+    background: #059669; /* Success Green */
+    color: white;
+    border: none;
+    width: 52px; /* Perfect square size */
+    height: 52px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0; /* Para hindi mapipit ang button */
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+    transition: all 0.2s ease;
+}
+
+.icon-download-btn:active {
+    transform: scale(0.92);
+    background: #047857;
+}
+
+.icon-download-btn svg {
+    stroke-width: 2.5px;
+}
+
+/* --- 7. PAGINATION & TABLE --- */
+.pagination-controls {
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;
+}
+
+.page-pill { font-size: 0.8rem; font-weight: 800; color: var(--primary); background: #eef2ff; padding: 6px 14px; border-radius: 20px; }
+
+.nav-btn { background: #fff; border: 1px solid #e2e8f0; padding: 8px 16px; border-radius: 10px; font-weight: 700; cursor: pointer; }
+
+.table-container { 
+    background: white; border-radius: 20px; border: 1px solid var(--border); overflow: hidden; 
+}
+
+table { width: 100%; border-collapse: collapse; }
+th { background: #f8fafc; padding: 14px; font-size: 0.7rem; color: var(--text-muted); text-align: left; text-transform: uppercase; }
+td { padding: 14px; border-bottom: 1px solid #f1f5f9; }
+
+/* --- 8. BULK UPLOAD SECTION --- */
+.bulk-upload-section {
+    margin-top: 10px; padding: 20px;
+    background: #f8fafc; border-radius: 18px; border: 1px solid #e2e8f0;
+}
+
+.csv-drop-zone {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    background: #f8fafc; border: 2px dashed #cbd5e1;
+    padding: 30px 20px !important; border-radius: 12px; text-align: center; cursor: pointer;
+    color: var(--primary); font-weight: 800; font-size: 0.8rem; margin: 15px 0;
+}
+
+.bulk-process-btn { margin-top: 12px; }
+
+/* --- 9. SESSION OPEN GROUP --- */
+/* --- 9. CUSTOM SESSION PICKER (THE LIST LOOK) --- */
+.session-open-group { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px;
+}
+
+/* Custom styled "Select" box */
+.custom-select-container {
+    background: #fff;
+    border: 2.5px solid #38bdf8; /* Blue border from your reference */
+    border-radius: 16px;
+    overflow: hidden; /* Para hindi lumampas yung options sa corners */
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.1);
+}
+
+/* The actual list of sessions */
+#sessionSelect {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #38bdf8;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+}
+
+/* --- THE "INSIDE" STYLE (Options) --- */
+/* Note: Standard <option> styling is limited, but this adds what is possible */
+select#sessionSelect option {
+    background: #fff;
+    color: #1e293b;
+    padding: 15px; /* Spacing sa loob */
+    font-weight: 600;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Hover/Selection effect for the options */
+select#sessionSelect option:checked,
+select#sessionSelect option:hover {
+    background: #e0f2fe !important; /* Soft blue highlight */
+    color: #0369a1;
+}
+
+/* Action Buttons */
+.session-action-buttons { 
+    display: flex; 
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.open-session-btn {
+    flex: 4;
+    height: 54px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.delete-icon-btn {
+    flex: 1;
+    height: 54px;
+    background: #fff1f2 !important;
+    color: #e11d48;
+    border: 1px solid #fecaca;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+/* --- 10. RECENT REGISTRATIONS (DETAILS) --- */
+/* --- ENHANCED MASTER ROSTER SECTION --- */
+/* --- ENHANCED MASTER ROSTER SECTION --- */
+#masterRosterSection {
+    /* Eto ang magbibigay ng space sa pagitan ng CSV at Roster */
+    margin-top: 30px !important; 
+    margin-bottom: 20px;
+
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    
+    /* Subtle border para magmukhang hiwalay na card */
+    border: 1px solid rgba(226, 232, 240, 0.8) !important;
+    border-radius: 16px; /* Ginawang 16px para bumagay sa ibang cards */
+    padding: 0; 
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover effect para malaman na clickable yung section */
+#masterRosterSection:hover {
+    border-color: var(--primary-light) !important;
+    transform: translateY(-2px);
+}
+
+
+/* Custom Summary (The Trigger Bar) */
+#masterRosterSection summary {
+    list-style: none; /* Removes default arrow */
+    padding: 18px 25px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #475569; /* Slate Blue */
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    letter-spacing: 0.05em;
+    transition: background 0.2s ease;
+}
+
+#masterRosterSection summary:hover {
+    background: #f8fafc;
+}
+
+/* Creating a Custom Arrow with CSS */
+#masterRosterSection summary::after {
+    content: '↓';
+    font-size: 1.2rem;
+    color: #4f46e5; /* Primary Indigo */
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+#masterRosterSection[open] summary::after {
+    transform: rotate(180deg);
+}
+
+/* --- THE INTERNAL CONTENT --- */
+.roster-preview {
+    padding: 15px;
+    max-height: 400px; /* Limits height so footer stays visible */
+    overflow-y: auto;
+    border-top: 1px solid #f1f5f9;
+}
+
+/* --- THE DANGER ZONE (CONSOLIDATED) --- */
+.danger-wipe-btn {
+    /* Ginawang saktong sukat para sa Infinix XPad */
+    width: calc(100% - 30px); 
+    margin: 15px auto 35px auto; /* 35px sa ilalim para sa spacing na kailangan mo */
+    display: block; /* Para gumana ang auto margin */
+    
+    padding: 14px;
+    background: #fff1f2; /* Soft Red Glass look */
+    color: #e11d48; /* Corporate Red */
+    border: 1.5px dashed #fda4af;
+    border-radius: 12px;
+    
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.danger-wipe-btn:hover {
+    background: #e11d48;
+    color: white;
+    border-style: solid;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(225, 29, 72, 0.2);
+}
+
+.danger-wipe-btn:active {
+    transform: scale(0.97);
+}
+
+/* --- 11. INSTITUTIONAL HEADER --- */
+.institution-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 24px 30px; background: #ffffff; border-radius: 24px;
+    margin-bottom: 35px; border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+}
+
+.logo-side { width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.logo-side img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.institution-details { flex-grow: 1; text-align: center; padding: 0 20px; }
+.institution-details h2 { margin: 0; font-size: 0.85rem; font-weight: 800; white-space: nowrap; color: #0c006b; text-transform: uppercase; }
+.institution-details .school-name { margin: 2px 0; font-size: 0.65rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; }
+.institution-details .lsg-subtitle { margin: 0; font-size: 0.6rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
+
+/* --- 12. MODALS & FOOTER --- */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(4px);
+    display: none; align-items: center; justify-content: center; z-index: 2000;
+}
+
+.modal-content {
+    background: white; padding: 30px; border-radius: 24px;
+    width: 90%; max-width: 400px; text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    animation: modalPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalPop { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+.modal-actions { display: flex; gap: 12px; }
+.modal-btn { flex: 1; padding: 14px; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; }
+.modal-btn.cancel { background: #f1f5f9; color: #475569; }
+.modal-btn.confirm { background: #dc2626; color: white; }
+
+.app-footer {
+    position: fixed; bottom: 0; left: 0; width: 100%; padding: 12px 0;
+    background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05); text-align: center; z-index: 999;
+}
+
+.icon-back-btn {
+    display: flex; align-items: center; gap: 8px; background: #fff;
+    border: 1px solid var(--border); padding: 8px 16px; border-radius: 12px;
+    font-weight: 700; color: var(--text-main); cursor: pointer;
+}
+
+/* --- 13. TABLET OPTIMIZATIONS --- */
+@media screen and (min-width: 768px) {
+    .container { max-width: 900px; }
+    header h1 { font-size: 3rem; }
+    .card { padding: 32px; }
+    .stat-val { font-size: 2.2rem; }
+    .modern-search { font-size: 1.1rem; padding: 18px 18px 18px 55px !important; }
+}
+
+/* --- ELITE INSTITUTIONAL HEADER (STRETCHED & CENTERED) --- */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+    /* Kinukuha ang buong lapad ng screen */
+    width: 100vw; 
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    border-bottom: 1.5px solid rgba(79, 70, 229, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+.institution-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    /* Pinapanatili ang content sa loob ng main container width */
+    max-width: 850px; 
+    margin: 0 auto;
+    padding: 12px 20px;
+    width: 100%;
+}
+
+/* --- PNG LOGO CONTAINER --- */
+.logo-side {
+    width: 60px; 
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Interactive touch for PNG logos */
+.logo-side img:active {
+    transform: scale(0.9);
+}
+
+/* --- TABLET OPTIMIZATION (Infinix XPad) --- */
+@media screen and (min-width: 768px) {
+    .institution-header {
+        max-width: 900px; /* Slightly wider for tablets */
+        padding: 15px 40px;
+    }
+    .logo-side { 
+        width: 85px; 
+        height: 85px; 
+    }
+    .institution-details h2 {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Center Content: Balanced Typography */
+.institution-details {
+    flex: 1;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.institution-details h2 {
+    margin: 0;
+    font-size: 0.8rem; /* Professional sizing */
+    font-weight: 800;
+    color: #0c006b; /* CSU Corporate Blue */
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+
+.institution-details .school-name {
+    margin: 4px 0 2px 0;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--primary); /* Indigo theme */
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+
+.institution-details .lsg-subtitle {
+    margin: 4px 0 0 0;
+    font-size: 0.55rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    background: rgba(79, 70, 229, 0.05); /* Soft pill look */
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 50px;
+    border: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+/* Optimization for Tablet (Infinix XPad) */
+@media screen and (min-width: 768px) {
+    .logo-side { width: 80px; height: 80px; }
+    .institution-details h2 { font-size: 1rem; }
+    .institution-details .school-name { font-size: 0.75rem; }
+}
+
+/* --- ENHANCED DEVELOPER FOOTER --- */
+.app-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(79, 70, 229, 0.1);
+    z-index: 1000;
+}
+
+.footer-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.app-footer p {
+    margin: 0;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+.developer-name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--primary);
+    /* Subtle glow effect */
+    text-shadow: 0 0 15px rgba(79, 70, 229, 0.2);
+    letter-spacing: 0.02em;
+}
+
+.footer-meta {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 2px;
+}
+
+.separator {
+    color: var(--primary-light);
+    opacity: 0.5;
+}
+
+/* --- TABLET OPTIMIZATION (Infinix XPad) --- */
+@media screen and (min-width: 768px) {
+    .developer-name {
+        font-size: 1.15rem;
+    }
+    .app-footer {
+        padding: 20px 0;
+    }
+}
+
+/* --- FORMAL GLASSMORPHISM UI --- */
+
+/* Apply to all main containers */
+.card, 
+.institution-header, 
+.session-header, 
+.table-container,
+#masterRosterSection {
+    background: rgba(255, 255, 255, 0.75) !important; /* Semi-transparent white */
+    backdrop-filter: blur(12px) saturate(180%); /* The glass "frosted" effect */
+    -webkit-backdrop-filter: blur(12px) saturate(180%); /* Safari/Tablet support */
+    
+    border: 1px solid rgba(255, 255, 255, 0.3) !important; /* Subtle "shine" on the edge */
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07); /* Soft, formal shadow */
+    
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Glass effect for Table Rows */
+#studentTableBody tr {
+    background: rgba(255, 255, 255, 0.4);
+    transition: background 0.2s ease;
+}
+
+#studentTableBody tr:hover {
+    background: rgba(255, 255, 255, 0.8); /* Highlights row on tap/hover */
+}
+
+/* Glass effect for Input Fields */
+input[type="text"], 
+input[type="number"], 
+select {
+    background: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid rgba(79, 70, 229, 0.2) !important;
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    padding: 10px;
+    color: #1e293b;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.9) !important;
+    outline: none;
+    border-color: #4f46e5 !important;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* --- AESTHETIC MODAL SYSTEM --- */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.4); /* Dark tinted overlay */
+    backdrop-filter: blur(8px);
+    display: none; /* Hidden by default */
+    align-items: center; justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.9);
+    width: 90%; max-width: 400px;
+    padding: 30px;
+    border-radius: 24px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transform: translateY(20px);
+    animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.modal-icon { font-size: 3rem; margin-bottom: 15px; }
+
+.modal-content h3 { color: #1e293b; font-size: 1.5rem; margin-bottom: 10px; }
+.modal-content p { color: #64748b; line-height: 1.6; margin-bottom: 25px; }
+
+.modal-actions { display: flex; gap: 12px; }
+
+.modal-btn {
+    flex: 1; padding: 14px; border: none; border-radius: 12px;
+    font-weight: 700; cursor: pointer; transition: all 0.2s;
+}
+
+.modal-btn.secondary { background: #f1f5f9; color: #475569; }
+.modal-btn.danger { background: #e11d48; color: white; box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3); }
+
+.modal-btn:active { transform: scale(0.95); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { to { transform: translateY(0); } }
+
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100px); /* Nakatago sa taas */
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    z-index: 10000;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.toast-notification.show {
+    transform: translateX(-50%) translateY(0); /* Lilitaw */
+}
+
+.toast-content { display: flex; align-items: center; gap: 10px; }
+.toast-icon { font-size: 1.2rem; }
+#toastMessage { font-weight: 700; color: #1e293b; font-size: 0.9rem; }
+
+/* --- Dashboard Card Spacing --- */
+.card {
+    margin-bottom: 24px; /* Mas malaking gap para hindi siksikan */
+}
+
+/* --- Final Organized Create Event Card --- */
+.create-session-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing sa loob ng card */
+}
+
+/* Force the container to be a simple block, avoiding the 4-column grid */
+.create-session-group .registration-grid {
+    display: block !important; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make the input field look exactly like the others but FULL WIDTH */
+#newEventName {
+    width: 100% !important;
+    padding: 14px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    font-size: 1rem;
+    display: block;
+}
+
+/* Animation for focus (para aesthetic) */
+#newEventName:focus {
+    outline: none;
+    border-color: #4f46e5;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+/* ... dating code sa taas ... */
+} 
+
+/* --- I-PASTE DITO SA PINAKAHULI --- */
+.search-action-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon-download-btn {
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.csv-btn {
+    background: rgba(79, 70, 229, 0.1) !important;
+    color: #4f46e5 !important;
+    border: 1px solid rgba(79, 70, 229, 0.2) !important;
+}
+
+.email-btn {
+    background: rgba(16, 185, 129, 0.1) !important;
+    color: #10b981 !important;
+    border: 1px solid rgba(16, 185, 129, 0.2) !important;
+}
+
+.icon-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 📱 MOBILE RESPONSIVE OVERRIDE (DAPAT NASA PINAKA-BABA) --- */
+@media screen and (max-width: 600px) {
+    /* 1. Container - Huwag pilitin ang 850px sa phone */
+    body {
+        padding: 10px !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* 2. Registration Grid - Gawing 1 column imbes na 2 */
+    .registration-grid {
+        grid-template-columns: 1fr !important; /* Pagpapatungin ang Name at ID */
+        gap: 8px;
+    }
+
+    /* 3. Stats Grid - Gawing side-by-side pero mas maliit ang text */
+    .stats-grid, .stats-bar {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 5px !important;
+    }
+    
+    .stat-val {
+        font-size: 1.2rem !important; /* Liitan ang numbers para hindi lumampas */
+    }
+    
+    .stat-label {
+        font-size: 0.55rem !important;
+    }
+
+    /* 4. Search & Download Row - Stack them or wrap them */
+    .search-action-row {
+        flex-direction: row; /* Panatilihing magkatabi */
+        gap: 8px;
+    }
+    
+    .modern-search {
+        padding: 12px 12px 12px 40px !important; /* Bawasan ang padding */
+        font-size: 14px !important;
+    }
+
+    /* 5. Table Fix - PINAKA-IMPORTANTE */
+    .table-container {
+        width: 100%;
+        overflow-x: auto; /* Payagan ang pag-scroll pakanan sa table */
+        display: block;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    table {
+        min-width: 500px; /* Force minimum width para hindi siksikan ang text */
+    }
+
+    /* 6. Header Adjustments */
+    header h1 {
+        font-size: 1.3rem !important;
+    }
+    
+    .institution-header {
+        padding: 15px !important;
+        flex-direction: column !important; /* I-stack ang logos sa phone */
+        gap: 10px;
+    }
+    
+    .institution-details h2 {
+        font-size: 0.7rem !important;
+        white-space: normal !important; /* Payagan ang line break sa mahabang school name */
+    }
+
+    /* 7. Footer Buttons */
+    .session-action-buttons {
+        flex-direction: column; /* I-stack ang Open at Delete buttons */
+    }
+}
